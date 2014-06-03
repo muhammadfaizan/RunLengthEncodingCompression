@@ -1,0 +1,126 @@
+#include<graphics.h>
+#include<stdio.h>
+#include<process.h>
+#include<conio.h>
+void main(){int ch,i,c,d,mode,base,power,res=1,j=1,base1,res1,ft,ftt=1,k;
+float a1,a2,a3,a4,b1,b2,b3,b4,n,sum,sub,multi,dev,squre,one=0,ob,mm,per=0;
+int gd=DETECT,gmode;initgraph(&gd,&gmode,"");
+while(1)
+{
+setbkcolor(0);
+setcolor(1);
+rectangle(175,0,400,140);
+printf("operation is Heren");
+rectangle(0,0,170,479);
+setcolor(4);
+outtextxy(250,10,"Menu :-");
+setcolor(2);
+outtextxy(200,20,"1. For addition");
+setcolor(3);
+outtextxy(200,30,"2. For subtraction");
+setcolor(4);
+outtextxy(200,40,"3. For multiplication");
+setcolor(5);
+outtextxy(200,50,"4. For division");
+setcolor(6);
+outtextxy(200,60,"5. For mode");
+setcolor(7);
+outtextxy(200,70,"6. For factorial");
+setcolor(8);
+outtextxy(200,80,"7. For squre");
+setcolor(9);
+outtextxy(200,90,"8. For power n");
+setcolor(10);
+outtextxy(200,100,"9. For Sum of 1 to n no.");
+setcolor(11);
+outtextxy(200,110,"10. for percentage");
+outtextxy(200,120,"0. For exit");
+setcolor(12);
+outtextxy(200,130,"enter your choice");
+scanf("%d",&ch);
+rectangle(175,150,550,330);
+switch(ch)
+{
+case 1:
+setcolor(2);
+outtextxy(200,140,"enter the value of a&b for addition");
+scanf("%f %f",&a1,&b1);
+sum=a1+b1;
+printf("Ans=>%fn",sum);
+break;
+case 2:
+setcolor(3);
+outtextxy(200,160,"enter the value of a&b for subtration");
+scanf("%f %f",&a2,&b2);
+sub=a2-b2;
+printf("Ans=>%fn",sub);
+break;case 3:
+setcolor(4);
+outtextxy(200,180,"enter the value of a&b for multiplication");
+scanf("%f %f",&a3,&b3);
+multi=a3*b3;
+printf("Ans=>%fn",multi);
+break;
+case 4:
+setcolor(5);
+outtextxy(200,200,"enter the value of a&b for division");
+scanf("%f %f",&a4,&b4);
+dev=a4/b4;
+printf("Ans=>%fn",dev);
+break;
+case 5:
+setcolor(6);
+outtextxy(200,220,"enter the value for mode");
+scanf("%d %d",&c,&d);
+mode=c%d;
+printf("Ans=>%fn",mode);
+break;
+case 6:
+setcolor(7);
+outtextxy(200,240,"enter the no to cal.factorial");
+scanf("%d",&ft);
+for(k=0;k<=(ft+1);k++)
+{
+ftt=ftt*ft;ft--;}
+printf("Ans=>%dn",ftt);
+break;
+case 7:
+setcolor(8);
+outtextxy(200,260,"enter the value for squre");
+scanf("%d",&base1);
+res1=(base1*base1);
+printf("%dn",res1);
+break;
+case 8:
+setcolor(9);
+outtextxy(200,280,"enter the base & power");
+scanf("%d %d",&base,&power);
+while(j<=power)
+{
+res=res*base;j=j+1;
+}
+printf("%dn",res);
+break;
+case 9:
+setcolor(10);
+outtextxy(200,300,"enter the how many no.is add");
+scanf("%f",&n);
+for(i=1;i<=n;i++)
+{
+one =i;
+}
+printf("Ans=>%fn",one);
+break;
+case 10:
+setcolor(11);
+outtextxy(200,320,"enter the obtained marks&maximum marks");
+scanf("%f %f",&ob,&mm);
+per=(ob/mm)*100;
+printf("%fn",per);
+break;
+case 0:
+exit(0);
+}
+}
+getch();
+}
